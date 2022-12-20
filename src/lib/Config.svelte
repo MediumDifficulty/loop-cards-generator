@@ -14,7 +14,7 @@
 
 <Popover class="inline">
     <PopoverButton>
-        <InlineSVG src="more_horiz.svg" class="fill-primary m-1 hover:fill-tertiary duration-300" />
+        <InlineSVG src="loop-cards-generator/more_horiz.svg" class="fill-primary m-1 hover:fill-tertiary duration-300" />
     </PopoverButton>
 
     <PopoverPanel class="inline">
