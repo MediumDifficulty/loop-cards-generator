@@ -32,6 +32,9 @@ jobs:
       - name: Build Js
         run: npm run build-web
       
+      - name: Add .nojekyll
+        run: touch build/.nojekyll
+
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.1
