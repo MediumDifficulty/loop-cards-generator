@@ -22,7 +22,8 @@ jobs:
       
       - name: Setup wasm-pack
         uses: jetli/wasm-pack-action@v0.4.0
-        version: 'latest'
+        with:
+          version: 'latest'
       
 
       - name: Build Rust
