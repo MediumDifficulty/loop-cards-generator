@@ -14,8 +14,11 @@ const config = {
 			fallback: null,
 			precompress: false,
 			strict: true
-		})
-	}
+		}),
+		paths: {
+			base: "/loop-cards-generator"
+		},
+	},
 };
 
 export default config;
