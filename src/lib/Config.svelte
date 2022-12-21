@@ -18,10 +18,13 @@
     </PopoverButton>
 
     <PopoverPanel class="inline">
-        <div class="absolute w-3/4 left-[12.5%] rounded-lg shadow-lg bg-white" style="--range-handle-focus: #367FC9" in:scale="{{ duration: 500, easing: quintOut }}" out:scale="{{ duration: 500, easing: quintOut }}">
+        <div class="absolute w-3/4 left-[12.5%] rounded-lg shadow-lg bg-white" style="--range-handle-focus: #367FC9" transition:scale={{ duration: 500, easing: quintOut }}>
             <div class="grid grid-cols-3">
                 <ConfigBlock label="Card Count">
-                    <NumberInput bind:value={config.card_count} min={0} max={100} />
+                    <NumberInput bind:value={config.card_count} max={100} />
+                </ConfigBlock>
+                <ConfigBlock label="Attempts">
+                    <NumberInput bind:value={config.max_attempts} max={10000} step={1000} />
                 </ConfigBlock>
                 <ConfigBlock label="Addition">
                     <SumConfigInput bind:config={config.addition} />

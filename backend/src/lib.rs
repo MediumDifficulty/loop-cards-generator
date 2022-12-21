@@ -10,8 +10,11 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-pub fn generate(config: JsValue, seed: u64) -> JsValue {
-    serde_wasm_bindgen::to_value(
-        &generator::generate_set(&serde_wasm_bindgen::from_value(config).unwrap(), seed)
-    ).unwrap()
+pub fn generate(config: JsValue, seed: u64) -> Result<JsValue, String> {
+    let generated = generator::generate_set(&serde_wasm_bindgen::from_value(config).unwrap(), seed);
+
+    match generated {
+        Ok(g) => Ok(serde_wasm_bindgen::to_value(&g).unwrap()),
+        Err(e) => Err(e)
+    }
 }
