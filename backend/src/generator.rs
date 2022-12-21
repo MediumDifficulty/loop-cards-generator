@@ -24,7 +24,11 @@ pub fn generate_set(config: &GeneratorConfig, seed: u64) -> Result<Vec<(String, 
 
     add_generators!(set, config,
         addition,
-        subtraction
+        subtraction,
+        multiplication,
+        division,
+        double,
+        half_of
     );
 
     let mut rng = SmallRng::seed_from_u64(seed);

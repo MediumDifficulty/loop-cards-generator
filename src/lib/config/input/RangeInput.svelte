@@ -4,8 +4,10 @@
 
     export let range: RangeInclusive
 
-    export let min: number
-    export let max: number
+    export let min: number = 0
+    export let max: number = 100
+
+    export let step: number = 20
 </script>
 
 <RangeSlider values={[range.start, range.end]}
@@ -13,5 +15,5 @@
         range.start = e.detail.values[0]
         range.end = e.detail.values[1]
     }}
-    range pushy pips float hoverable all="label" max={max} min={min} 
+    range pushy pips float hoverable all="label" max={max} min={min} pipstep={step}
 />

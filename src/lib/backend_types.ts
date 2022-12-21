@@ -8,14 +8,30 @@ export type GeneratorConfig = {
     
     addition: SumConfig,
     subtraction: SumConfig,
+    multiplication: TimesTablesConfig,
+    division: TimesTablesConfig,
+    half_of: RangeConfig,
+    double: RangeConfig,
+}
+
+export type RangeConfig  ={
+    range: RangeInclusive
 }
 
 export type ModuleStates = {
     addition: bool,
     subtraction: bool,
+    multiplication: bool,
+    division: bool,
+    double: bool,
+    half_of: bool,
 }
 
 export type SumConfig = {
     answer_range: RangeInclusive,
-    max_distance: usize,
+    distance_range: RangeInclusive,
+}
+
+export type TimesTablesConfig = {
+    times_tables: RangeInclusive
 }

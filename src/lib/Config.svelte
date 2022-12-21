@@ -6,8 +6,11 @@
     import NumberInput from "./config/input/NumberInput.svelte";
     import ConfigBlock from "./config/ConfigBlock.svelte";
     import ModuleStates from "./config/ModuleStates.svelte";
-    import SumConfigInput from "./config/SumConfigInput.svelte";
+    import SumConfigInput from "./config/input/SumConfigInput.svelte";
     import InlineSVG from "svelte-inline-svg"
+    import MultiplicationConfigInput from "./config/input/TimesTablesConfigInput.svelte";
+    import TimesTablesConfigInput from "./config/input/TimesTablesConfigInput.svelte";
+    import RangeConfigInput from "./config/input/RangeConfigInput.svelte";
 
     export let config: GeneratorConfig
 </script>
@@ -36,6 +39,18 @@
                 </div>
                 <ConfigBlock label="Subtraction">
                     <SumConfigInput bind:config={config.subtraction} />
+                </ConfigBlock>
+                <ConfigBlock label="Multiplication">
+                    <TimesTablesConfigInput bind:config={config.multiplication} />
+                </ConfigBlock>
+                <ConfigBlock label="Division">
+                    <TimesTablesConfigInput bind:config={config.division} />
+                </ConfigBlock>
+                <ConfigBlock label="Double">
+                    <RangeConfigInput bind:config={config.double} />
+                </ConfigBlock>
+                <ConfigBlock label="Half of">
+                    <RangeConfigInput bind:config={config.half_of} />
                 </ConfigBlock>
             </div>
         </div>
