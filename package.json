@@ -20,6 +20,7 @@
 		"svelte": "^3.54.0",
 		"svelte-check": "^2.9.2",
 		"svelte-inline-svg": "^1.2.0",
+		"svelte-preprocess": "^5.0.0",
 		"svelte-range-slider-pips": "^2.1.1",
 		"tailwindcss": "^3.2.4",
 		"tslib": "^2.4.1",
